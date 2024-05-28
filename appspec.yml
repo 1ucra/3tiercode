@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /hellowaws/django-community-board-main/
-
+    overwrite: true
 hooks:
   AfterInstall:
     - location: scripts/after_install.sh
