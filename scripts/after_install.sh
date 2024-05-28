@@ -17,4 +17,4 @@ export db_user_pwd
 export aurora_endpoint
 export redis_endpoint
 
-envsubst < ./templates/nodbsettings.py.template > ./community_board_project/settings.py
+envsubst < ./templates/settings.py.template > ./community_board_project/settings.py
