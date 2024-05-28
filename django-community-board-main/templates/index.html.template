@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최종프로젝트</title>
+    {% include "modules/bootstrap.html" %}
+</head>
+<body>
+    {% include "modules/header.html" %}
+    <span style="font-size: 30px;">"current backend server  ${hostname}"</span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - yum install -y python3-pip gcc python3-devel mariadb105-devel
+      - yum groupinstall "Development Tools" -y
+      - yum install bzip2-devel libffi-devel -y
+
+  pre_build:
+    commands:
+      - export HOME=/root
+      - git config --global credential.helper '!aws codecommit credential-helper $@'
+      - git config --global credential.UseHttpPath true
+      - cd /
+      - git clone "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/hellowaws"
+
+  build:
+    commands:
+      - cd /hellowaws/django-community-board-main/
+      - pip install --no-cache-dir -r ./requirements.txt
+      - pip install django
+      - pip install django-redis
+
+  post_build:
+    commands:
+      - echo "Build 단계 완료"
+
+artifacts:
+  files:
+    - '**/*'
