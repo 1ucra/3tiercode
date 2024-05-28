@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /hellowaws/django-community-board-main/
+    destination: /hellowaws/django-community-board-main-v2/
     overwrite: true
 hooks:
   AfterInstall:
