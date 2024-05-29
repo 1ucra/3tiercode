@@ -5,7 +5,8 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - yum install -y python3-pip gcc python3-devel mariadb105-devel
+      - yum install git -y
+      - yum install -y python3-pip gcc python3-devel mariadb-devel
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
 
@@ -31,4 +32,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: "build_output123.zip"
+  name: "build_output/1.zip"
