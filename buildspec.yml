@@ -31,4 +31,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: "build_output.zip"
+  name: "build_output123.zip"
