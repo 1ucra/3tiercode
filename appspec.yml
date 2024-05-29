@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /hellowaws/
+    destination: /hellowaws-application-sourcecode/
     overwrite: true
 hooks:
   BeforeInstall:

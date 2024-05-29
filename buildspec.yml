@@ -15,7 +15,7 @@ phases:
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true
       - cd /
-      - git clone "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/hellowaws-application-sourcecode"
+      - git clone "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/$REPOSITORY_NAME"
 
   build:
     commands:
@@ -31,3 +31,4 @@ phases:
 artifacts:
   files:
     - '**/*'
+  name: "build_output.zip"
