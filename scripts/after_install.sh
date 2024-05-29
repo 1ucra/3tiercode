@@ -2,7 +2,7 @@
 
 sudo su
 
-cd /hellowaws/django-community-board-main/
+cd /hellowaws-application-sourcecode/django-community-board-main/
 
 hostname=$(hostname)
 export hostname

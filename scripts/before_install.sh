@@ -1,2 +1,4 @@
 #!/bin/bash
-rm -rf /hellowaws/django-community-board-main/*
+echo "BeforeInstall script started"
+rm -rf /hellowaws-application-sourcecode/django-community-board-main/*
+echo "BeforeInstall script completed"
