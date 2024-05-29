@@ -5,8 +5,11 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
+      - amazon-linux-extras install -y nginx1
+      - sudo yum install -y wget  
       - yum install git -y
       - yum install -y python3-pip gcc python3-devel
+      - yum install -y mariadb
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
 
