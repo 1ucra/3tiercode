@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.8
+      python: 3.7
     commands:
       - yum update -y
       - yum install -y wget  
@@ -12,10 +12,9 @@ phases:
       - yum install -y python3-pip 
       - yum install -y gcc 
       - yum install -y python3-devel
-      - yum install -y python38-devel
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
-      - python3.8 -m pip install pymysql
+      - python3 -m pip install pymysql
 
   pre_build:
     commands:
