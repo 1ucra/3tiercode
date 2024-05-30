@@ -12,11 +12,15 @@ source venv/bin/activate
 
 # 가상 환경이 올바르게 활성화되었는지 확인
 echo "Python interpreter location:"
-which python
+which python3
+echo "Current pip version:"
+python3 -m pip --version
+
 
 # pip 업그레이드 및 패키지 설치
 python3 -m pip install --upgrade pip
-
+echo "Upgraded pip version:"
+python3 -m pip --version
 # 패키지 개별 설치 및 오류 확인
 python3 -m pip install django==3.2.25
 python3 -m pip install asgiref==3.7.2
