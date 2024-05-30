@@ -10,7 +10,7 @@ phases:
       - yum install -y wget  
       - yum install git -y
       - yum install -y python3-pip gcc python3-devel
-      - yum install mariadb -y
+      - yum install mariadb-server -y
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
 
