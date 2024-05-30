@@ -5,6 +5,8 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
+      - amazon-linux-extras install epel -y
+      - sudo yum install nginx -y
       - amazon-linux-extras install -y nginx1
       - sudo yum install -y wget  
       - yum install git -y
