@@ -27,7 +27,7 @@ phases:
   build:
     commands:
       - cd /hellowaws-application-sourcecode/django-community-board-main/
-      - python3.8 -m pip install --no-cache-dir -r ./requirements.txt
+      - python3 -m pip install --no-cache-dir -r ./requirements.txt
 
   post_build:
     commands:
