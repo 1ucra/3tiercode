@@ -14,7 +14,6 @@ phases:
       - yum install -y python3-devel
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
-      - python3 -m pip install pymysql
 
   pre_build:
     commands:
