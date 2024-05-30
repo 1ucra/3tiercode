@@ -9,7 +9,10 @@ phases:
       - yum install -y wget  
       - yum install git -y
       - yum install pkgconfig -y
-      - yum install -y python3-pip gcc python3-devel python38-devel -y
+      - yum install -y python3-pip 
+      - yum install -y gcc 
+      - yum install -y python3-devel
+      - yum install -y python38-devel
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
       - python3.8 -m pip install pymysql
