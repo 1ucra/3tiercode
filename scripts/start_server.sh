@@ -25,7 +25,7 @@ python3 -m pip --version
 python3 -m pip install django==3.2.25
 python3 -m pip install asgiref==3.7.2
 python3 -m pip install sqlparse==0.4.4
-python3 -m pip install mariadb-client>=2.1.0
+python3 -m pip install mysqlclient>=1.3.12
 python3 -m pip install pkgconfig==1.5.5
 python3 -m pip install django-redis==5.3.0
 
