@@ -7,7 +7,7 @@ amazon-linux-extras install nginx1
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-yum install gcc
+yum install gcc -y
 yum install mysql-devel -y
 yum install python3-devel -y
 #python3 -m pip install pymysql
