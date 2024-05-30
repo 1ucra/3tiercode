@@ -6,12 +6,14 @@ phases:
       python: 3.8
     commands:
       - yum update -y
-      - yum install -y nginx
       - yum install -y wget  
       - yum install git -y
-      - yum install -y python3-pip gcc python3-devel
+      - sudo yum install pkgconfig -y
+      - yum install mariadb-devel -y
+      - yum install -y python3-pip gcc python3-devel python38-devel -y
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
+      - python3.8 -m pip install pymysql
 
   pre_build:
     commands:
@@ -24,7 +26,7 @@ phases:
   build:
     commands:
       - cd /hellowaws-application-sourcecode/django-community-board-main/
-      - pip install --no-cache-dir -r ./requirements.txt
+      - python3.8 -m pip install --no-cache-dir -r ./requirements.txt
 
   post_build:
     commands:

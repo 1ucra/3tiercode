@@ -1,5 +1,14 @@
 #!/bin/bash
+sudo su
 echo "BeforeInstall script started"
-sudo yum install mariadb-client -y
-rm -rf /hellowaws-application-sourcecode/django-community-board-main/*
+amazon-linux-extras enable python3.8
+yum install python3.8
+alternatives --set python /usr/bin/python3.8
+python3.8 -m ensurepip --upgrade
+yum install mariadb -y
+yum install mariadb-devel -y
+yum install python38-devel -y
+python3.8 -m pip install pymysql
+export MYSQLCLIENT_CFLAGS=$(/bin/mysql_config --cflags)
+export MYSQLCLIENT_LDFLAGS=$(/bin/mysql_config --libs)
 echo "BeforeInstall script completed"
