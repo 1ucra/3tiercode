@@ -27,8 +27,6 @@ phases:
     commands:
       - cd /hellowaws-application-sourcecode/django-community-board-main/
       - pip install --no-cache-dir -r ./requirements.txt
-      - pip install django
-      - pip install django-redis
 
   post_build:
     commands:
