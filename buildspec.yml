@@ -9,7 +9,7 @@ phases:
       - yum install -y wget  
       - yum install git -y
       - yum install pkgconfig -y
-      - yum install mysql-devel -y
+      - yum install mariadb-devel -y
       - yum install -y python3-pip gcc python3-devel python38-devel -y
       - yum groupinstall "Development Tools" -y
       - yum install bzip2-devel libffi-devel -y
