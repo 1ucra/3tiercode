@@ -41,9 +41,9 @@ phases:
     commands:
       - echo "Build 단계 완료"
       - cd /hellowaws-application-sourcecode/
-      - zip -r /output/build_output.zip .
+      - zip -r /build_output.zip .
 
 artifacts:
   files:
-    - 'output/build_output.zip'
+    - 'build_output.zip'
   name: "build_output.zip"
