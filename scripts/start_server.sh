@@ -25,9 +25,9 @@ python3 -m pip install sqlparse==0.4.4
 python3 -m pip install mysqlclient >=2.1.0
 python3 -m pip install pkgconfig==1.5.5
 python3 -m pip install django-redis==5.3.0
-
+systemctl status mysql
 # nginx 서비스 재시작
-sudo systemctl restart nginx
+systemctl restart nginx
 
 # Django 마이그레이션 및 서버 실행
 echo "Python interpreter location after reactivation:"
