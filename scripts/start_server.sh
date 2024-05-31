@@ -16,13 +16,25 @@ python3 -m pip --version
 # pip 업그레이드 및 패키지 설치
 echo "Upgraded pip version:"
 python3 -m pip --version
-# 패키지 개별 설치 및 오류 확인
-python3 -m pip install django==3.2.25
-python3 -m pip install asgiref==3.7.2
-python3 -m pip install sqlparse==0.4.4
-python3 -m pip install mysqlclient
-python3 -m pip install pkgconfig==1.5.5
-python3 -m pip install django-redis==5.3.0
+
+# 패키지 설치 및 오류 확인
+install_package() {
+    PACKAGE=$1
+    echo "Installing $PACKAGE..."
+    if python3 -m pip install $PACKAGE; then
+        echo "$PACKAGE installed successfully."
+    else
+        echo "Failed to install $PACKAGE."
+        exit 1
+    fi
+}
+
+install_package django==3.2.25
+install_package asgiref==3.7.2
+install_package sqlparse==0.4.4
+install_package mysqlclient
+install_package pkgconfig==1.5.5
+install_package django-redis==5.3.0
 
 # nginx 서비스 재시작
 systemctl restart nginx
