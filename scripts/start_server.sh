@@ -13,19 +13,17 @@ which python3
 echo "Current pip version:"
 python3 -m pip --version
 
-
 # pip 업그레이드 및 패키지 설치
-
 echo "Upgraded pip version:"
 python3 -m pip --version
 # 패키지 개별 설치 및 오류 확인
 python3 -m pip install django==3.2.25
 python3 -m pip install asgiref==3.7.2
 python3 -m pip install sqlparse==0.4.4
-python3 -m pip install mysqlclient >=2.1.0
+python3 -m pip install mysqlclient
 python3 -m pip install pkgconfig==1.5.5
 python3 -m pip install django-redis==5.3.0
-systemctl status mysql
+
 # nginx 서비스 재시작
 systemctl restart nginx
 
