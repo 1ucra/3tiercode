@@ -7,26 +7,7 @@ python3 -m venv venv
 source venv/bin/activate
 export PATH=$PATH:/usr/local/bin
 python3 -m pip install --upgrade pip
-
-# 패키지 설치 및 오류 확인
-install_package() {
-    PACKAGE=$1
-    echo "Installing $PACKAGE..."
-    if python3 -m pip install $PACKAGE; then
-        echo "$PACKAGE installed successfully."
-    else
-        echo "Failed to install $PACKAGE."
-        exit 1
-    fi
-}
-
-install_package django==3.2.25
-install_package asgiref==3.7.2
-install_package sqlparse==0.4.4
-install_package mysqlclient
-install_package pkgconfig==1.5.5
-install_package django-redis==5.3.0
-
+python3 -m pip install --no-cache-dir -r ./requirements.txt
 # nginx 서비스 재시작
 systemctl restart nginx
 
