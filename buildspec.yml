@@ -43,7 +43,6 @@ phases:
       - echo "Build 단계 완료"
       - cd /hellowaws-application-sourcecode/
 
-artifacts:
-  files:
-    - '**/*'  
-  name: "apple" 
+  artifacts:
+    files:
+      - '**/*'  
