@@ -35,13 +35,12 @@ phases:
       - export aurora_endpoint
       - export redis_endpoint
       - envsubst < ./templates/settings.py.template > ./community_board_project/settings.py
-      - echo "Checking if settings.py is created:"
-      - ls -l ./community_board_project/
-      - echo "Content of settings.py:"
-      - cat ./community_board_project/settings.py
 
   post_build:
     commands:
+      - echo "Build 단계 완료"
+      - cd /hellowaws-application-sourcecode/
+      - zip -r build_output.zip .
 
 artifacts:
   files:

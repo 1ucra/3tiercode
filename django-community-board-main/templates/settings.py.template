@@ -103,7 +103,7 @@ DATABASES = {
 #     }
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "mydb",  # 환경변수가 없을 경우 'default_db_name' 사용
+        "NAME": "mydb", 
         "USER": "${db_user_id}",
         "PASSWORD": "${db_user_pwd}",
         "HOST": "${aurora_endpoint}",
