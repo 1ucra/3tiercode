@@ -17,6 +17,7 @@ phases:
 
   pre_build:
     commands:
+      - export $AWS_DEFAULT_REGION
       - export HOME=/root
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true
@@ -34,7 +35,7 @@ phases:
       - export db_user_pwd
       - export aurora_endpoint
       - export redis_endpoint
-      -  envsubst < ./templates/settings.py.template > ./community_board_project/settings.py
+      - envsubst < ./templates/settings.py.template > ./community_board_project/settings.py
 
   post_build:
     commands:
