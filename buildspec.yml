@@ -17,7 +17,6 @@ phases:
 
   pre_build:
     commands:
-      - export $AWS_DEFAULT_REGION
       - export HOME=/root
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true
