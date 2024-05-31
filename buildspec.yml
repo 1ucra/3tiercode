@@ -38,7 +38,7 @@ phases:
 
   post_build:
     commands:
-      - echo "Build 단계 완료"
+      - echo $db_user_id
 
 artifacts:
   files:

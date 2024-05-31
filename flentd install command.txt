@@ -6,7 +6,9 @@ sudo systemctl start td-agent
 sudo systemctl enable td-agent
 sudo systemctl status td-agent
 
-sudo td-agent-gem install fluent-plugin-s3
+#sudo td-agent-gem install fluent-plugin-s3
+
+sudo td-agent-gem install fluent-plugin-elasticsearch -v '5.2.0'
 
 sudo vi /etc/td-agent/td-agent.conf
 
@@ -51,5 +53,5 @@ sudo vi /etc/td-agent/td-agent.conf td에서 파일 출력 설정
 sudo systemctl restart td-agent
 
 
-curl -X GET "http://a4ced084d56264a6ea0754761d650776-828082069.ap-northeast-2.elb.amazonaws.com:9200/_cat/indices?v"
-curl -X GET "http://a4ced084d56264a6ea0754761d650776-828082069.ap-northeast-2.elb.amazonaws.com:9200/ktd-logstash-*/_search?pretty&q=*:*&size=5"
+curl -X GET "http:/a3755c2259daf4ed5b47aae74142171c-452205947.ap-northeast-2.elb.amazonaws.com:9200/_cat/indices?v"
+curl -X GET "http://a3755c2259daf4ed5b47aae74142171c-452205947.ap-northeast-2.elb.amazonaws.com:9200/ktd-logstash-*/_search?pretty&q=*:*&size=5"
