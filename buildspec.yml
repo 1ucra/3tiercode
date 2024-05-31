@@ -45,4 +45,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: "build_output/1.zip"
+  name: "build_output.zip"
