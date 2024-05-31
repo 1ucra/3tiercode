@@ -6,17 +6,7 @@ cd /hellowaws-application-sourcecode/django-community-board-main/
 python3 -m venv venv
 source venv/bin/activate
 export PATH=$PATH:/usr/local/bin
-sudo python3 -m ./venv/bin/python3 -m pip install --upgrade pip
-
-# 가상 환경이 올바르게 활성화되었는지 확인
-echo "Python interpreter location:"
-which python3
-echo "Current pip version:"
-python3 -m pip --version
-
-# pip 업그레이드 및 패키지 설치
-echo "Upgraded pip version:"
-python3 -m pip --version
+python3 -m pip install --upgrade pip
 
 # 패키지 설치 및 오류 확인
 install_package() {
@@ -41,8 +31,7 @@ install_package django-redis==5.3.0
 systemctl restart nginx
 
 # Django 마이그레이션 및 서버 실행
-echo "Python interpreter location after reactivation:"
-which python
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver 0.0.0.0:8080
