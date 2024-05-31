@@ -5,7 +5,8 @@ cd /hellowaws-application-sourcecode/django-community-board-main/
 # 가상 환경 생성 및 활성화
 python3 -m venv venv
 source venv/bin/activate
-python3 -m ./venv/bin/python3 -m pip install --upgrade pip
+export PATH=$PATH:/usr/local/bin
+sudo python3 -m ./venv/bin/python3 -m pip install --upgrade pip
 
 # 가상 환경이 올바르게 활성화되었는지 확인
 echo "Python interpreter location:"
