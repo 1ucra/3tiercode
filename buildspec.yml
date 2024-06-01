@@ -41,8 +41,9 @@ phases:
   post_build:
     commands:
       - echo "Build 단계 완료"
-      - cd /hellowaws-application-sourcecode/
 
 artifacts:
   files:
-    - '**/*'  
+    - '/**/*'  
+  base-directory: build
+  name: my-app-artifacts
