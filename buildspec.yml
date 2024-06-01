@@ -44,6 +44,5 @@ phases:
 
 artifacts:
   files:
-    - '/**/*'  
-  base-directory: build
-  name: my-app-artifacts
+    - '/hellowaws-application-sourcecode/**/*'  
+  name: hellowaws-artifacts
