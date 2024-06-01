@@ -1,6 +1,6 @@
 django==3.2.25
 asgiref==3.7.2
 sqlparse==0.4.4
-mysqlclient
+mysqlclient==2.2.4
 pkgconfig==1.5.5
 django-redis==5.3.0

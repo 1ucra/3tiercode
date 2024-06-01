@@ -10,8 +10,5 @@ sudo systemctl enable nginx
 yum install gcc -y
 yum install mysql-devel -y
 yum install python3-devel -y
-#python3 -m pip install pymysql
-# export MYSQLCLIENT_CFLAGS=$(/bin/mysql_config --cflags)
-# export MYSQLCLIENT_LDFLAGS=$(/bin/mysql_config --libs)
 
 echo "BeforeInstall script completed"
