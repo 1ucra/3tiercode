@@ -37,7 +37,6 @@ phases:
       - export redis_endpoint
       - envsubst < ./templates/settings.py.template > ./community_board_project/settings.py
       - cat ./community_board_project/settings.py
-      - python manage.py collectstatic --noinput
       
   post_build:
     commands:
