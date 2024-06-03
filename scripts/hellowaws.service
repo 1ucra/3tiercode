@@ -1,0 +1,16 @@
+[Unit]
+Description=My Django Application
+After=network.target
+
+[Service]
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/hellowaws-application-sourcecode/django-community-board-main
+Environment="PATH=/hellowaws-application-sourcecode/django-community-board-main/venv/bin"
+ExecStart=/hellowaws-application-sourcecode/django-community-board-main/venv/bin/python3 manage.py runserver 0.0.0.0:8080
+StandardOutput=file:/hellowaws-application-sourcecode/django-community-board-main/server.log
+StandardError=file:/hellowaws-application-sourcecode/django-community-board-main/error.log
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
