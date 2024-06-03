@@ -14,7 +14,7 @@ systemctl restart nginx
 # Django 마이그레이션 및 서버 실행
 python3 manage.py makemigrations
 python3 manage.py migrate
-cp /hellowaws-application-sourcecode/django-community-board-main/scripts/hellowaws.service /etc/systemd/system/hellowaws.service
+cp /hellowaws-application-sourcecode/scripts/hellowaws.service /etc/systemd/system/hellowaws.service
 systemctl daemon-reload
 systemctl start hellowaws
 systemctl enable hellowaws
