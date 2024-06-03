@@ -14,4 +14,4 @@ systemctl restart nginx
 # Django 마이그레이션 및 서버 실행
 python3 manage.py makemigrations
 python3 manage.py migrate
-python3 manage.py runserver 0.0.0.0:8080
+nohup python3 manage.py runserver 0.0.0.0:8080 &
